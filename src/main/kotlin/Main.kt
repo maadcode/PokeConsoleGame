@@ -45,12 +45,11 @@ fun iniciarGame(usuario: Pokemon, oponente: Pokemon) {
         if(turno) {
             oponente.vida = oponente.vida - seleccionarAtaque(usuario)
             println("Al oponente le quedan ${oponente.vida} puntos de vida")
-            turno = !turno
         } else {
             usuario.vida = usuario.vida - obtenerAtaqueOponente(oponente)
             println("Te queda ${usuario.vida} puntos de vida")
-            turno = !turno
         }
+        turno = !turno
     }
     if(usuario.vida <= 0) println("${oponente.nombre} te ha derrotado! Perdiste el juego.") else println("Ganaste el juego. Felicitaciones!!!")
 }
